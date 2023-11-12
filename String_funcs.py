@@ -1,14 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jul 18 09:26:41 2023
-
-@author: HP
-"""
-
-"""For a string X = Shantanusinh parmar 
-Extract last char using -ve indexing
-extract nh pa using =ve indexing 
-"""
 
 X = "Shantanusinh Parmar"
 
@@ -130,3 +119,17 @@ print(Str15.isspace())
 ##istitle, gives boolean value if a string has first letter capital
 Str16 = "Chris Hemmsworth"
 print(Str16.istitle())
+
+##format,insert elements
+Str17 = "Hello {}friends this {} a code for formatting"
+print(Str17.format("amigos ","is"))
+
+##zfill,insert s before string
+Str18 = "Ayo man What ae yo doin"
+print(Str18.zfill(30))
+
+##isupper, chec fro uppercase char
+Str19 = "RAGNAROK"
+print(Str19.isupper())
+
+
