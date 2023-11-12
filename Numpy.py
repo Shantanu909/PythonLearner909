@@ -1,22 +1,36 @@
+#Task1: Matrix 4X4 checkerboard.
 import numpy as np
-arr = np.array([1,3,3,4,5,3,7,8,3])
-print(arr)
-
-arr2 = np.array([0,10,10,5,0,0,0,0,0])
-"""
-arr2d = np.array([[1,2,3],[0,9,1,2],[0,1,2,3,4]],dtype=object)
-print(f"hi\n{arr2d}"),
-
-rando = np.random.randint(0,1000000)
-print(rando)
-
-arr3 = np.vstack(arr)
-print(arr3)
-arr4 = np.hstack(arr)
-print(arr4)"""
-
-arr6 = np.intersect1d(arr, arr2)
-print(arr6)
-arr7 = np.setdiff1d(arr, arr2)
-print(arr7)
+checkerboard = np.zeros((4, 4), dtype=int)
+checkerboard[1::2, ::2] = 1
+checkerboard[::2, 1::2] = 1
+print("4x4 Checkerboard Matrix:")
+print(checkerboard)
+#Output:
+ 
+#Task2: Using nditer and split function.
+arr = np.array([[1, 2], [3, 4], [5, 6]])
+for x in np.nditer(arr):
+    print(x, end=' ')
+split_arrays = np.split(arr, 3)
+print("\nSplit Arrays:")
+for split_arr in split_arrays:
+    print(split_arr)
+#Output:
+ 
+#Task3: Searching and sorting arrays.
+arr = np.array([3, 1, 4, 2, 5])
+element_to_search = 4
+index = np.where(arr == element_to_search)
+sorted_arr = np.sort(arr)
+print("Index of", element_to_search, ":", index)
+print("Sorted Array:", sorted_arr)
+#Output:
+ 
+#Task4: File handling.
+arr = np.array([1, 2, 3, 4, 5])
+np.save('my_array.npy', arr)
+loaded_arr = np.load('my_array.npy')
+print("Loaded Array:", loaded_arr)
+#Output:
+ 
 
